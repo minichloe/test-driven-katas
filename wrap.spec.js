@@ -9,6 +9,9 @@ describe("wrap", () => {
         expect(wrap("hello friends", 15)).to.equal("hello friends");
     })
     it('Returns the string formatted with line breaks if longer than column length', () => {
-        expect(wrap("Hello friends, welcome to fullstack. I hope you are having a good day", 20)).to.equal("Hello friends, \nwelcome to fullstack. I \nhope you are having \na good day");
+        expect(wrap("Lorem ipsum dolor sit eu amet, elit na magna sem amet nulla vel purus ac ligula.", 20)).to.equal("Lorem ipsum dolor\nsit eu amet, elit na\nmagna sem amet nulla\nvel purus ac ligula.");
+    })
+    it('Sets column int to default to first space if input number is too low', () => {
+        expect(wrap('hello world', 1)).to.equal('hello\nworld');
     })
 })
