@@ -11,6 +11,6 @@ describe('twoSum', () => {
     })
 
     it('Returns an array with two numbers that equal target', () => {
-        expect(twoSum([4, 4, 1, 7, 9], 8)).to.deep.equal([4, 4]);
+        expect(twoSum([7, 4, 1, 6, 9], 8)).to.deep.equal([0, 2]);
     })
 })
