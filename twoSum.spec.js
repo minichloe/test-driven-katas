@@ -4,6 +4,8 @@ const twoSum = require('./twoSum');
 describe('twoSum', () => {
     it('Returns an empty array if target cannot be reached', () => {
         expect(twoSum([3, 4], 2)).to.deep.equal([]);
+        expect(twoSum([], 3)).to.deep.equal([]);
+        expect(twoSum([])).to.deep.equal([]);
     })
 
     it('Returns an array with two numbers if target is reached', () => {
@@ -12,5 +14,11 @@ describe('twoSum', () => {
 
     it('Returns an array with two numbers that equal target', () => {
         expect(twoSum([7, 4, 1, 6, 9], 8)).to.deep.equal([0, 2]);
+    })
+
+    it('Handles lacking input without beraking', () => {
+        expect(twoSum([], 3)).to.deep.equal([]);
+        expect(twoSum([])).to.deep.equal([]);
+        expect(twoSum()).to.deep.equal([]);
     })
 })
